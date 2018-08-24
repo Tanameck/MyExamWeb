@@ -4,11 +4,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MyExamWebTest
 {
     [TestClass]
-    public class UnitTest1
+    public class clsUserTests
     {
         [TestMethod]
         public void TestMethod1()
         {
+            
         }
     }
 }
