@@ -12,3 +12,7 @@ C:\VisualStudioProjects\MyExamWebTest\obj\Debug\MyExamWebTest.csproj.CoreCompile
 C:\VisualStudioProjects\MyExamWebTest\obj\Debug\MyExamWebTest.csproj.CopyComplete
 C:\VisualStudioProjects\MyExamWebTest\obj\Debug\MyExamWebTest.dll
 C:\VisualStudioProjects\MyExamWebTest\obj\Debug\MyExamWebTest.pdb
+C:\MyExamWeb\MyExamWebTest\obj\Debug\MyExamWebTest.csprojAssemblyReference.cache
+C:\MyExamWeb\MyExamWebTest\obj\Debug\MyExamWebTest.csproj.CoreCompileInputs.cache
+C:\MyExamWeb\MyExamWebTest\obj\Debug\MyExamWebTest.dll
+C:\MyExamWeb\MyExamWebTest\obj\Debug\MyExamWebTest.pdb

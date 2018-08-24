@@ -29,26 +29,36 @@ public class clsEnvironment
     {
     }
 
-    public string pfsConnect()
+    public bool pfnConnect(out string osError)
     {
         try
         {
+            osError = "";
+
             if (toCon.State != System.Data.ConnectionState.Open)
             {
-                toCon.ConnectionString = "DATA SOURCE = TANAMECK;" +
-                                                "INITIAL CATALOG = dbExamenOnline;" +
-                                                "USER ID=Tanameck;" +
-                                                "PASSWORD=1234";
+                toCon.ConnectionString = "Server = tcp:ulacitserver.database.windows.net,1433;" +
+                                            " Initial Catalog = dbMyExam;" +
+                                            " Persist Security Info = False;" +
+                                            " User ID = usrMyExam;" +
+                                            " Password = Pass1234;" +
+                                            " MultipleActiveResultSets = False;" +
+                                            " Encrypt = True;" +
+                                            " TrustServerCertificate = False;" +
+                                            " Connection Timeout = 30;";
 
                 toCon.Open(); //Iniciar conexion
             }
-            return "";
+            return true;
         }
         catch (Exception Err)
         {
             //Retorna el error  
             if (Err.Source != null)
-                return "IOException source: " + Err.Message;
+            {
+                osError = "IOException source: " + Err.Message;
+                return false;
+            }
             throw;
         }
     }

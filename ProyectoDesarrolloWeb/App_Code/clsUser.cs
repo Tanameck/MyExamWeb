@@ -31,7 +31,7 @@ public class clsUser
     {
         try
         {
-            string tsError = poEnvironment.pfsConnect();
+            bool tnError = poEnvironment.pfnConnect(out string tsError);
 
             if (tsError.Equals(""))
             {
@@ -70,7 +70,7 @@ public class clsUser
     {
         try
         {
-            string tsError = poEnvironment.pfsConnect();
+            bool tnError = poEnvironment.pfnConnect(out string tsError);
 
             if (tsError.Equals(""))
             {
@@ -130,7 +130,7 @@ public class clsUser
     {
         try
         {
-            string tsError = poEnvironment.pfsConnect();
+            bool tnError = poEnvironment.pfnConnect(out string tsError);
 
             if (tsError.Equals(""))
             {
