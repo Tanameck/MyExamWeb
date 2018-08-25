@@ -7,21 +7,12 @@ public class clsUserTests
     [TestMethod]
     public void pfnLogin_UserLogin_ReturnTrue()
     {
-        clsUser toUser = new clsUser();
         clsSQL toSQL = new clsSQL();
+        clsUser toUser = new clsUser(toSQL);
         bool tnResult = false;
         string tsError = "";
 
-        if (toSQL.pfnConnect(out string err))
-        {
-            tnResult = toUser.pfnLogin(out tsError, "braulio", "1234");
-
-            bool tnResult1 = toSQL.pfnDisconnect(out tsError);
-        }
-        else
-        {
-            tnResult = false;
-        }
+        tnResult = toUser.pfnLogin(out tsError, "braulio", "1234");
 
         Assert.IsTrue(tnResult);
     }

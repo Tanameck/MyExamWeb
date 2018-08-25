@@ -11,7 +11,7 @@ namespace prjMyExamWeb1
 {
 
 
-    public partial class WebForm1
+    public partial class frmHomeAdmin
     {
 
         /// <summary>
