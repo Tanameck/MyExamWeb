@@ -1,2 +1,0 @@
-C:\MyExamWeb\prjMyExamWeb1.Tests\obj\Debug\prjMyExamWeb1.Tests.csproj.CoreCompileInputs.cache
-C:\MyExamWeb\prjMyExamWeb1.Tests\obj\Debug\prjMyExamWeb1.Tests.csprojAssemblyReference.cache
