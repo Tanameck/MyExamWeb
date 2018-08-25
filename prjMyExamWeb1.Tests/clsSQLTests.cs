@@ -7,11 +7,11 @@ public class clsSQLTests
     [TestMethod]
     public void pfnConnect_SuccessfulConnect_ReturnTrue()
     {
-        clsSQL toEnvironment = new clsSQL();
+        clsSQL toSQL = new clsSQL();
         bool tnResult = false;
         string tsError = "";
 
-        tnResult = toEnvironment.pfnConnect(out tsError);
+        tnResult = toSQL.pfnConnect(out tsError);
 
         Assert.IsTrue(tnResult);
     }

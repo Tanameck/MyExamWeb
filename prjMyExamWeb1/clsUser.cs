@@ -65,7 +65,7 @@ public class clsUser
                                 " FROM [dbo].[USER]" +
                                 " WHERE username = '" + psUsuario + "'" +
                                 " AND CAST(CASE WHEN password = HASHBYTES('SHA2_512', '" + psPassword + "') then 1 else 0 end as bit) = 1" +
-                                " AND estado = 1";
+                                " AND status = 1";
 
                 if (poSQL.pfnExecuteQuery(out osError, tsSQL, clsSQL.peQueryType.Query))
                 {
@@ -73,30 +73,25 @@ public class clsUser
                     {
                         poSQL.toRs.Read();
 
-                        //HttpContext.Current.Session["tipo"] = poSQL.toRs[8];
+                        HttpContext.Current.Session["tipo"] = poSQL.toRs[7].ToString();
                         //HttpContext.Current.Session["idUser"] = poSQL.toRs[0];
                         //HttpContext.Current.Session["nombreCompleto"] = poSQL.toRs[3] + " " + poSQL.toRs[4] + " " + poSQL.toRs[5];
                         //HttpContext.Current.Session["preguntaAleatoriaTable"] = "PREGUNTA_ALEATORIA_ID" + HttpContext.Current.Session["idUser"].ToString();
 
-                        if (poSQL.pfnDisconnect(out osError))
+                        if (!poSQL.pfnDisconnect(out osError))
                         {
-                            if (!HttpContext.Current.Session["tipo"].ToString().Equals(""))
-                            {
-                                switch (Int32.Parse(HttpContext.Current.Session["tipo"].ToString()))
-                                {
-                                    case 0: //Normal User
-                                        HttpContext.Current.Response.Redirect("Homepage.aspx");
-                                        break;
-                                    case 1: //Admin
-                                        HttpContext.Current.Response.Redirect("HomeAdmin.aspx");
-                                        break;
-                                    default:
-                                        break;
-                                }
-                            }
+                            return false;
                         }
                     }
+                } 
+                else
+                {
+                    return false;
                 }
+            }
+            else
+            {
+                return false;
             }
 
             return true;

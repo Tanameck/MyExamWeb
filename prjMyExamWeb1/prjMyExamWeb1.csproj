@@ -148,7 +148,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="frmLogin1.aspx" />
+    <Content Include="frmDashboard.aspx" />
+    <Content Include="frmHomeAdmin.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -230,7 +231,7 @@
     <Content Include="assets\vendor\font-awesome\scss\_variables.scss" />
     <Content Include="assets\vendor\jquery\jquery.min.map" />
     <Content Include="assets\vendor\jquery\jquery.slim.min.map" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="frmLogin.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -269,12 +270,19 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="clsSQL.cs" />
     <Compile Include="clsUser.cs" />
-    <Compile Include="frmLogin1.aspx.cs">
-      <DependentUpon>frmLogin1.aspx</DependentUpon>
+    <Compile Include="frmDashboard.aspx.cs">
+      <DependentUpon>frmDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="frmLogin1.aspx.designer.cs">
-      <DependentUpon>frmLogin1.aspx</DependentUpon>
+    <Compile Include="frmDashboard.aspx.designer.cs">
+      <DependentUpon>frmDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmHomeAdmin.aspx.cs">
+      <DependentUpon>frmHomeAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmHomeAdmin.aspx.designer.cs">
+      <DependentUpon>frmHomeAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -287,12 +295,12 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="frmLogin.aspx.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="frmLogin.aspx.designer.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
